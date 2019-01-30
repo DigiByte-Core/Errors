@@ -1,5 +1,5 @@
 {
-  "name": "cc-errors",
+  "name": "digiasset-errors",
   "version": "0.1.1",
   "description": "Errors emitted with Colored-Coins server responses.",
   "main": "index.js",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Colored-Coins/Errors.git"
+    "url": "https://github.com/DigiByte-Core/Errors.git"
   },
   "scripts": {
     "test": "mocha",
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "debug": "^2.2.0",
-    "errors": "git+https://github.com/Colored-Coins/errors-base.git",
+    "errors": "git+https://github.com/DigiByte-Cor/errors-base.git",
     "lodash": "^4.14.0"
   },
   "devDependencies": {
