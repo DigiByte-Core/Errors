@@ -3,7 +3,7 @@
 | 10000      | Validation error                                |
 | 11001      | Sample resolution too high                      |
 | 11002      | Requested blocks range is too high              |
-| 20000      | Colored transaction construction has failed     |
+| 20000      | DigiAsset transaction construction has failed   |
 | 20001      | Output is already spent                         |
 | 20002      | No output with the requested asset              |
 | 20003      | Not enough satoshi to cover transaction         |
