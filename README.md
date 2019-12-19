@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Colored-Coins/Errors.svg?branch=master)](https://travis-ci.org/Colored-Coins/Errors)
 [![Coverage Status](https://coveralls.io/repos/github/Colored-Coins/Errors/badge.svg?branch=master)](https://coveralls.io/github/Colored-Coins/Errors?branch=master)
-[![npm version](https://badge.fury.io/js/cc-errors.svg)](https://badge.fury.io/js/cc-errors)
+[![npm version](https://badge.fury.io/js/digiasset-errors.svg)](https://badge.fury.io/js/digiasset-errors)
 # Errors
 Errors assigned to Colored-Coins servers responses.<br>
 This module allows servers reuse errors, acheiving more comprehensive and readable error responses,
@@ -8,12 +8,12 @@ and more importantly - enables better logging and tracing of errors by client ap
 ## Usage
 ### Installation
 ```
-$ npm install cc-errors
+$ npm install digiasset-errors
 ```
 ### Creating error messages
 First, `require` the module like so:
 ```javascript
-require('cc-errors')
+require('digiasset-errors')
 ```
 Create specific Error instance of one of the supported error classes:
 ```javascript
@@ -46,7 +46,7 @@ outputs:
 Express.js error handling middleware.
 
 ```javascript
-var errorhandler = require('cc-errors').errorHandler()
+var errorhandler = require('digiasset-errors').errorHandler()
 ```
 #### errorhandler(options)
 Create new error handling middleware.
@@ -66,7 +66,7 @@ As with any express error handling middleware, it should be put after the router
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
-var errorHandler = require('cc-errors').errorHandler
+var errorHandler = require('digiasset-errors').errorHandler
 
 app.use(bodyParser())
 app.get('/error', function (req, res, next) {

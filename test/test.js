@@ -29,7 +29,7 @@ app.get('/array_error', function (req, res, next) {
 app.get('/error', function (req, res, next) {
   next(new Error('Some Error'))
 })
-app.get('/cc_error', function (req, res, next) {
+app.get('/da_error', function (req, res, next) {
   if (!req.query || req.query.explain !== 'true') {
     return next(new errors.ValidationError())
   }
@@ -84,7 +84,7 @@ describe('Test error of correct format - production', function () {
 
   it('Colored-Coins error', function (done) {
     request(app)
-			.get('/cc_error')
+			.get('/da_error')
 			.expect(400)
 			.end(function (err, res) {
         if (err) return done(err)
@@ -100,7 +100,7 @@ describe('Test error of correct format - production', function () {
 
 	it('Colored-Coins error, with explanation', function (done) {
     request(app)
-			.get('/cc_error?explain=true')
+			.get('/da_error?explain=true')
 			.expect(400)
 			.end(function (err, res) {
 				if (err) return done(err)
@@ -163,7 +163,7 @@ describe('Test error of correct format - development', function () {
 
 	it('Colored-Coins error', function (done) {
     request(app)
-			.get('/cc_error')
+			.get('/da_error')
 			.expect(400)
 			.end(function (err, res) {
 				if (err) return done(err)
@@ -178,7 +178,7 @@ describe('Test error of correct format - development', function () {
 
 	it('Colored-Coins error with explanation', function (done) {
     request(app)
-			.get('/cc_error?explain=true')
+			.get('/da_error?explain=true')
 			.expect(400)
 			.end(function (err, res) {
 				if (err) return done(err)
@@ -195,7 +195,7 @@ describe('Test error of correct format - development', function () {
   it('Colored-Coins error with request-id', function (done) {
     dynamicRequestIdMiddleware.replace(requestIdMiddleware)
     request(app)
-      .get('/cc_error?explain=true')
+      .get('/da_error?explain=true')
       .expect(400)
       .end(function (err, res) {
         if (err) return done(err)
